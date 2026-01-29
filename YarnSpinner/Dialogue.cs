@@ -543,7 +543,7 @@ namespace Yarn
             set => vm.PrepareForLinesHandler = value;
         }
 
-        private VirtualMachine vm;
+        public VirtualMachine vm;
 
         /// <summary>
         /// Gets the <see cref="Yarn.Library"/> that this Dialogue uses to

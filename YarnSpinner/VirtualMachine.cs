@@ -99,10 +99,10 @@ namespace Yarn
         Modulo,
     }
 
-    internal class VirtualMachine
+    public class VirtualMachine
     {
 
-        internal class State
+        public class State
         {
 
             /// <summary>The name of the node that we're currently
@@ -119,7 +119,7 @@ namespace Yarn
             public List<(Line line, string destination, bool enabled)> currentOptions = new List<(Line line, string destination, bool enabled)>();
 
             /// <summary>The value stack.</summary>
-            private Stack<Value> stack = new Stack<Value>();
+            public Stack<Value> stack = new Stack<Value>();
 
             /// <summary>Pushes a <see cref="Value"/> object onto the
             /// stack.</summary>
@@ -194,7 +194,7 @@ namespace Yarn
         /// </summary>
         internal Program Program { get; set; }
 
-        private State state = new State();
+        public State state = new State();
 
         public string currentNodeName
         {
@@ -254,7 +254,7 @@ namespace Yarn
             }
         }
 
-        Node currentNode;
+        public Node currentNode;
 
         public bool SetNode(string nodeName)
         {
@@ -440,7 +440,7 @@ namespace Yarn
             return currentNode.Labels[labelName];
         }
 
-        internal void RunInstruction(Instruction i)
+        public void RunInstruction(Instruction i)
         {
             switch (i.Opcode)
             {

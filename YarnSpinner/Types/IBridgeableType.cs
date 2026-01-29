@@ -6,7 +6,7 @@ namespace Yarn
     /// </summary>
     /// <typeparam name="TBridgedType">The CLR type that this type can be
     /// bridged to.</typeparam>
-    internal interface IBridgeableType<out TBridgedType> : IType
+    public interface IBridgeableType<out TBridgedType> : IType
     {
         /// <summary>
         /// Gets a default value appropriate for <typeparamref

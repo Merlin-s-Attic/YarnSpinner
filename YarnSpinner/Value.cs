@@ -8,7 +8,7 @@ namespace Yarn
     /// <summary>
     /// A value from inside Yarn.
     /// </summary>
-    internal partial class Value
+    public partial class Value
     {
         public Yarn.IType Type { get; internal set; }
 
