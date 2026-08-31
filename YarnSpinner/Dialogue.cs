@@ -965,6 +965,19 @@ namespace Yarn
         }
 
         /// <summary>
+        /// Gets or sets the index of the instruction that this Dialogue will
+        /// execute next within <see cref="CurrentNode"/>.
+        /// </summary>
+        /// <remarks>Merlin's Attic fork addition: saving a game mid-node needs
+        /// to record and later restore the exact instruction to resume
+        /// from.</remarks>
+        public int ProgramCounter
+        {
+            get => this.vm.state.programCounter;
+            set => this.vm.state.programCounter = value;
+        }
+
+        /// <summary>
         /// Returns the string ID that contains the original, uncompiled source
         /// text for a node.
         /// </summary>
